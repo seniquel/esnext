@@ -122,21 +122,19 @@ let tripService = new TripService();
 let priceService = new PriceService();
 
 tripService.findByName("Paris").then(trip =>
-    console.log(`Trip found : ${trip.toString()}`),
-    error => console.log(error));
+    console.log(`Trip found : ${trip.toString()}`))
+    .catch(error => console.log(error));
 
 tripService.findByName("Toulouse").then(trip =>
-    console.log(`Trip found : ${trip.toString()}`),
-    error => console.log(error));
+    console.log(`Trip found : ${trip.toString()}`))
+    .catch(error => console.log(error));
 
 tripService.findByName("Rio de Janeiro").then(trip =>
     priceService.findPriceByTripId(trip.id).then(price =>
-        console.log(`Price found : ${price}`),
-        error => console.log(error)),
-    error => console.log(error));
+        console.log(`Price found : ${price}`))
+    ).catch(error => console.log(error));
 
 tripService.findByName("Nantes").then(trip =>
     priceService.findPriceByTripId(trip.id).then(price =>
-        console.log(`Price found : ${price}`),
-        error => console.log(error)),
-    error => console.log(error));
+        console.log(`Price found : ${price}`))
+    ).catch(error => console.log(error));
