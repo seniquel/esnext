@@ -69,7 +69,7 @@ class FreeTrip extends Trip {
         this._price = 0;
     }
     toString() {
-        return "Free".concat(super.toString());
+        return "Free"+super.toString();
     }
 }
 const freeTrip = new FreeTrip("nantes", "Nantes", "img/nantes.jpg");
